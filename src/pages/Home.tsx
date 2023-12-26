@@ -9,7 +9,7 @@ import { changeLocalStorage } from "../services/storage";
 const Home = () => {
   const [email, setEmail] = useState<string>("");
   const [senha, setSenha] = useState<string>("");
-  const {setIsLogged, isLogged} = useContext(AppContext);
+  const {setIsLogged } = useContext(AppContext);
   const navigate = useNavigate();
 
   const validateUser = async (email: string, senha: string) => {
@@ -21,7 +21,13 @@ const Home = () => {
     }
 
     setIsLogged(true);
-    changeLocalStorage({login: true, email: loggedIn.email, id: loggedIn.id, nome: loggedIn.nome, balance: loggedIn.balance});
+    changeLocalStorage({
+      login: true,
+      email: (loggedIn as { email: string }).email,
+      id: (loggedIn as { id: number }).id,
+      nome: (loggedIn as { nome: string }).nome,
+      balance: (loggedIn as { balance: number }).balance
+    });
     return navigate(`/conta/1`);
   }
 

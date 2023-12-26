@@ -9,7 +9,7 @@ const ContaInfo = () => {
   const context = useContext(AppContext);
   const navigate = useNavigate();
   const { isLogged } = context;
-  const dadosUsuario = JSON.parse(getAllLocalStorage());
+  const dadosUsuario = JSON.parse(getAllLocalStorage() as string);
   
   useEffect(() => {
     if (!isLogged || !dadosUsuario.login) {

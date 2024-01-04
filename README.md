@@ -9,9 +9,7 @@ Projeto do curso FullStack da DIO para uma tela de login simples do Dio Bank.
 
 Acesse
 
-```bash
-  https://diobankex.netlify.app/
-```
+https://diobankex.netlify.app/
 
 ## Rodando localmente
 

@@ -7,6 +7,12 @@ Projeto do curso FullStack da DIO para uma tela de login simples do Dio Bank.
 **Back-end:** Node, TypeScript
 **Front-end:** React, Vite
 
+Acesse
+
+```bash
+  https://diobankex.netlify.app/
+```
+
 ## Rodando localmente
 
 Clone o projeto
